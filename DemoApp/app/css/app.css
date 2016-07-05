@@ -28,3 +28,16 @@ select, textarea {
   padding-left:6px;
   cursor:pointer;
 }
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
+  /*Ovo ovdje u kombinaciji sa ng-cloak nad bodyem omogućuje da se prvo učita sve i onda
+    rendera html (nema flashanja stranice dok se nešto učitava). U biti hide-unhide.
+    Navodno se isti efekt dobiva smještanjem script tagova u head. Zar nije to po 
+    jebenom defaultu? 
+  */
+}
+
+.blue {
+  color: blue;
+}
