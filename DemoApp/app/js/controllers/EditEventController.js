@@ -3,9 +3,7 @@
 eventsApp.controller('EditEventController',
     function EditEventController($scope) {
         $scope.saveEvent = function (event) {
-            if (event.name === undefined) {
-                window.alert('You need to provide the name!');
-            } else {
+            if (newEventForm.$valid) {
                 window.alert('Event ' + event.name + ' saved!');
             }
         }
