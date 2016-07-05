@@ -38,6 +38,10 @@ select, textarea {
   */
 }
 
+.padded {
+  padding:20px;
+}
+
 .blue {
   color: blue;
 }

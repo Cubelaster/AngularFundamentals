@@ -24,7 +24,7 @@
                 </ul>
             </div>
         </div>
-        <div ng-controller="EventController" style="padding: 20px;">
+        <div ng-controller="EventController" class="padded">
             <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" />
             <div class="row">
                 <div class="spann11">
@@ -73,7 +73,7 @@
                 <option value="Advanced">Advanced</option>
             </select>
             <ul class="thumbnails">
-                <li ng-repeat="session in event.sessions | orderBy:sortOrder | filter : query"> 
+                <li ng-repeat="session in event.sessions | orderBy:sortOrder | filter : query">
                     <!-- | limitTo : 2 
                         The thing about the limitTo filter is that it executes in order of appearance
                         resulting in filtering the number of results at that moment. For instance
@@ -101,7 +101,9 @@
                         </div>
                     </div>
                 </li>
+            </ul>
         </div>
+    </div>
 </body>
 
 </html>
