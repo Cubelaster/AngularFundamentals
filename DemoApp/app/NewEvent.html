@@ -21,7 +21,9 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav">
+                    <li><a href="/EventDetails.html">Event Details</a></li>
                     <li><a href="/NewEvent.html">Create Event</a></li>
+                    <li><a href="/EditProfile.html">Edit Profile</a></li>
                 </ul>
             </div>
         </div>
@@ -35,14 +37,14 @@
                         <label for="eventName">Event Name:</label>
                         <input id="eventName" required ng-model="event.name" type="text" placeholder="Name your event" />
                         <label for="eventDate">Event Date:</label>
-                        <input id="eventDate" required ng-model="event.date" ng-pattern="/\d\d/\d\d/\d\d\d\d/" type="text" placeholder="MM/DD/YYYY" />
+                        <input id="eventDate" required ng-model="event.date" ng-pattern="/\d\d/\d\d/\d\d\d\d/" type="text" placeholder="MM/DD/YYYY"/>
                         <label for="eventTime">Event Time:</label>
                         <input id="eventTime" required ng-model="event.time" type="text" placeholder="start and end time" />
                         <label for="eventLocation">Event Location:</label>
                         <input id="eventLocation" ng-model="event.location.address" required type="text" placeholder="Address of event" />
                         <br />
                         <input id="eventCity" ng-model="event.location.city" required type="text" class="input-small" placeholder="City..." />
-                        <input id="eventProvince" ng-model="event.location.province" required type="text" class="input-small" placeholder="Province..." />
+                        <input id="eventProvince" ng-model="event.location.province" required type="text" class="input-small" placeholder="Province..."/>
 
                         <label for="eventImageUrl">Image:</label>
                         <input id="eventImageUrl" ng-model="event.imageUrl" type="url" class="input-xlarge" placeholder="Image url" />

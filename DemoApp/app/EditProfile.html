@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Event Registration</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="/css/app.css" />    
+    <link rel="stylesheet" href="/css/app.css" />
     <script src="/lib/jquery.min.js"></script>
     <script src="/lib/angular/angular.js"></script>
     <script src="/lib/underscore-1.4.4.min.js"></script>
@@ -18,7 +18,16 @@
 
 <body>
 
-    <div class="container-fluid padded" ng-controller="EditProfileController">
+    <div class="container-fluid" ng-controller="EditProfileController">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li><a href="/EventDetails.html">Event Details</a></li>
+                    <li><a href="/NewEvent.html">Create Event</a></li>
+                    <li><a href="/EditProfile.html">Edit Profile</a></li>
+                </ul>
+            </div>
+        </div>
         <form name="profileForm">
             <div class="row-fluid">
 

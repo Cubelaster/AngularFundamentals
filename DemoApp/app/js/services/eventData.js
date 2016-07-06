@@ -1,44 +1,9 @@
 'use strict';
 
-eventsApp.factory('eventData', function () {
-    // eventResource, authService
+eventsApp.factory('eventData', function ($http) {
     return {
-        event: {
-            name: 'Angular Boot Camp',
-            date: '1/1/2013',
-            time: '10:30 am',
-            location: {
-                address: 'Google Hq',
-                city: 'Mountain View',
-                province: 'CA'
-            },
-            imageUrl: '/img/angularjs-logo.png',
-            sessions: [
-                {
-                    name: 'Directives Masterclass',
-                    creatorName: 'Bob Smith',
-                    duration: 1,
-                    level: 'Advanced',
-                    abstract: 'Something something',
-                    upVoteCount: 0
-                },
-                {
-                    name: 'Scopes for fun and profit',
-                    creatorName: 'John Doe',
-                    duration: 2,
-                    level: 'Introductory',
-                    abstract: 'Something something',
-                    upVoteCount: 0
-                },
-                {
-                    name: 'Well Behaved Controllers',
-                    creatorName: 'Jane Doe',
-                    duration: 4,
-                    level: 'Intermediate',
-                    abstract: 'Intermediate Advanced',
-                    upVoteCount: 0
-                }
-            ]
+        getEvent: function() {
+            return $http({ method: 'GET', url: 'data/event/1' });
         }
     };
     // return {
