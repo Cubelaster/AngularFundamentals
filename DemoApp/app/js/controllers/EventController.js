@@ -1,48 +1,11 @@
 'use strict';
 
 eventsApp.controller('EventController', 
-    function EventController($scope) {
-        $scope.snippet = '<span style="color:red">hi there</span>';
-        $scope.boolValue = true;
-        $scope.mystyle = {color:'red'};
-        $scope.myclass = "blue";
-        $scope.buttonDisabled = true;
+    function EventController($scope, eventData) {
+        $scope.event = eventData.event;
         $scope.sortOrder;
         $scope.query;
-        $scope.event = {
-            name: 'Angular Boot Camp',
-            date: '1/1/2013',
-            time: '10:30 am',
-            location: {
-                address: 'Google Hq',
-                city: 'Mountain View',
-                province: 'CA'
-            },
-            imageUrl: '/img/139426.png',
-            sessions: [
-                {name: 'Directives Masterclass',
-                 creatorName: 'Bob Smith',
-                 duration: 1,
-                 level: 'Advanced',
-                 abstract: 'Something something',
-                 upVoteCount: 0  
-                },
-                {name: 'Scopes for fun and profit',
-                 creatorName: 'John Doe',
-                 duration: 2,
-                 level: 'Introductory',
-                 abstract: 'Something something',
-                 upVoteCount: 0
-                },
-                {name: 'Well Behaved Controllers',
-                 creatorName: 'Jane Doe',
-                 duration: 4,
-                 level: 'Intermediate',
-                 abstract: 'Intermediate Advanced',
-                 upVoteCount: 0
-                }
-            ]
-        }
+        
 
         $scope.upVoteSession = function (session) {
             session.upVoteCount++;
