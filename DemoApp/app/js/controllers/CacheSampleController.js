@@ -1,6 +1,5 @@
 'use strict';
 
-
 eventsApp.controller('CacheSampleController',
     function($scope, myCache) {
 
@@ -15,5 +14,4 @@ eventsApp.controller('CacheSampleController',
         $scope.getCacheStats = function () {
             return myCache.info();
         };
-
     });
