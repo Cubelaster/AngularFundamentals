@@ -13,6 +13,7 @@
     <script src="/js/controllers/CacheSampleController.js"></script>
     <script src="/lib/bootstrap.min.js"></script>
     <script src="/lib/angular/angular-sanitize.js"></script>
+    <script src="/lib/angular/angular-cookies.js"></script>
 </head>
 
 <body>
@@ -28,13 +29,13 @@
                     <li><a href="/LocaleSample.html">Locale</a></li>
                     <li><a href="/TimeoutSample.html">Timeout</a></li>
                     <li><a href="/FilterSample.html">Filter</a></li>
+                    <li><a href="/CookieStoreSample.html">Cookie</a></li>
                 </ul>
             </div>
         </div>
         <div ng-controller="CacheSampleController" class="padded">
 
-            key: <input type="text" ng-model="key" /><br /> 
-            value: <input type="text" ng-model="value" /><br />
+            key: <input type="text" ng-model="key" /><br /> value: <input type="text" ng-model="value" /><br />
             <button type="button" class="btn" ng-click="addToCache(key, value)">Add To Cache</button>
             <br />
             <br />

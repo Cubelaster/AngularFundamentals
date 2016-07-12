@@ -13,6 +13,7 @@
     <script src="/js/controllers/CompileSampleController.js"></script>
     <script src="/lib/bootstrap.min.js"></script>
     <script src="/lib/angular/angular-sanitize.js"></script>
+    <script src="/lib/angular/angular-cookies.js"></script>
 </head>
 
 <body>
@@ -28,15 +29,16 @@
                     <li><a href="/LocaleSample.html">Locale</a></li>
                     <li><a href="/TimeoutSample.html">Timeout</a></li>
                     <li><a href="/FilterSample.html">Filter</a></li>
+                    <li><a href="/CookieStoreSample.html">Cookie</a></li>
                 </ul>
             </div>
         </div>
 
         <div ng-controller="CompileSampleController" class="padded">
             <div id="appendHere"></div>
-            <br />
-            name:<input type="text" ng-model="name"/><br />
-            markup:<input type="text" ng-model="markup"/><br />
+            <br /> name:
+            <input type="text" ng-model="name" /><br /> markup:
+            <input type="text" ng-model="markup" /><br />
             <button type="button" class="btn" ng-click="appentDivToElement(markup)">Append</button>
         </div>
     </div>

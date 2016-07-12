@@ -1,7 +1,7 @@
 'use strict';
 
 eventsApp.controller('FilterSampleController', function FilterSampleController($scope, /* $filter */ durationsFilter) {
-    // injecting the existing custom filter by referencing it by name+Filter - durationsFilter
+    // injecting the existing custom filter by referencing it by name+Filter - durationsFilter - existing filter is made in filters.js file
     $scope.data = {};
 
     // var durations = $filter('durations');
