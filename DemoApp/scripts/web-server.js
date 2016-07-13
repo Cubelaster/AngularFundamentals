@@ -14,6 +14,7 @@ app.get('/data/event/:id', events.get);
 app.post('/data/event/:id', events.save);
 
 app.get('*', function(req, res) {res.sendFile(rootPath + '/app/index.html');}) ;
+// this line tells us that for any other link the server has to load /app/index.html
 
 app.listen(8000);
 console.log('Listening on port ' + 8000 + '...');

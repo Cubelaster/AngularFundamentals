@@ -1,6 +1,8 @@
 <html ng-app="eventsApp">
 
 <head>
+    <base href="/" /> 
+    <!--base tag with href is absolutely needed if we want to get HTML5 routing to work-->
     <meta charset="utf-8">
     <title>Event Registration</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
@@ -24,8 +26,8 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav">
-                    <li><a href="#/events">List Events</a></li>                   
-                    <li><a href="#/newEvent">Create Event</a></li>
+                    <li><a href="events">List Events</a></li>                   
+                    <li><a href="newEvent">Create Event</a></li>
                 </ul>
             </div>
         </div>
