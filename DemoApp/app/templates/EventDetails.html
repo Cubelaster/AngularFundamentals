@@ -1,7 +1,7 @@
 <div class="padded">
     <div id="me">
         <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" />
-        <button type="button" class="btn btn-primary" ng-click="scrollToSession()">Scroll</button>
+        <!--<button type="button" class="btn btn-primary" ng-click="scrollToSession()">Scroll</button>-->
         <div class="row">
             <div class="spann11">
                 <h2 ng-style="mystyle" ng-bind="event.name | uppercase"></h2>
@@ -20,6 +20,7 @@
                 </address>
             </div>
         </div>
+        <button class="btn" ng-click="reload()">Reload</button>
         <hr />
 
         <h3>Sessions</h3>
