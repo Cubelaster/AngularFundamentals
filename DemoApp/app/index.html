@@ -15,21 +15,23 @@
     <script src="/js/controllers/EventController.js"></script>
     <script src="/js/controllers/EditEventController.js"></script>
     <script src="/js/controllers/EventListController.js"></script>
-    <script src="/js/controllers/MainMenuController.js"></script>
+    <script src="/js/controllers/SampleDirectiveController.js"></script>
     <script src="/js/services/eventData.js"></script>
     <script src="/js/filters.js"></script>
+    <script src="/js/directives/mySample.js"></script>
+    <script src="/js/directives/eventThumbnail.js"></script>
     <script src="/lib/underscore-1.4.4.min.js"></script>
     <script src="/lib/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <div class="navbar" ng-controller="MainMenuController">
+        <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav">
                     <li><a href="events">List Events</a></li>                   
-                    <li><a href="" ng-click="createEvent()" >Create Event</a></li>
-                    <!--a link must be blank if the $location.url is to kick in through the routing-->
+                    <li><a href="newEvent">Create Event</a></li>
+                    <li><a href="sampleDirective">Directive</a></li>
                 </ul>
             </div>
         </div>
