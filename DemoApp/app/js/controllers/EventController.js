@@ -10,14 +10,15 @@ eventsApp.controller('EventController',
         // console.log($route.current.pathParams.eventId); // used only to access path params 
         $scope.sortOrder;
         $scope.query;
-        eventData.getEvent($routeParams.eventId)
-            .$promise.then(function (event) {
-                $scope.event = event;
-            })
-            .catch(function (response) {
-                console.log(response)
-            })
-            ;
+        $scope.event = $route.current.locals.event; // used to get data off resolve
+        // eventData.getEvent($routeParams.eventId)
+        //     .$promise.then(function (event) {
+        //         $scope.event = event;
+        //     })
+        //     .catch(function (response) {
+        //         console.log(response)
+        //     })
+        //     ;
 
         $scope.reload = function () {
             $route.reload();
