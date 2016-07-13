@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static( rootPath + '/app'));
 
+app.get('/data/event', events.getAll);
 app.get('/data/event/:id', events.get);
 app.post('/data/event/:id', events.save);
 
