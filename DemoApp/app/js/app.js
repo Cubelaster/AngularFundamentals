@@ -25,11 +25,6 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute'])
                 }
                 // resolve waits for resources to load before rendering page - similar to ng-cloak          
             })
-            .when('/sampleDirective', 
-            {
-                templateUrl: 'templates/SampleDirective.html',
-                controller: 'SampleDirectiveController'
-            })
             .otherwise({ redirectTo: '/events' });
         $locationProvider.html5Mode(true);
     });
