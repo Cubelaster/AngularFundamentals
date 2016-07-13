@@ -1,11 +1,16 @@
 'use strict';
 
 eventsApp.controller('EventController',
-    function EventController($scope, eventData, $anchorScroll) {
+    function EventController($scope, eventData, $anchorScroll, $routeParams, $route) {
 
+        // console.log($route.current.foo); 
+        // accessing custom parameters from route config
+        // console.log($route.current.params.foo); 
+        // reading params from url ?foo=bar , and reading normal params like eventId
+        // console.log($route.current.pathParams.eventId); // used only to access path params 
         $scope.sortOrder;
         $scope.query;
-        eventData.getEvent()
+        eventData.getEvent($routeParams.eventId)
             .$promise.then(function (event) {
                 $scope.event = event;
             })
@@ -13,6 +18,11 @@ eventsApp.controller('EventController',
                 console.log(response)
             })
             ;
+
+        $scope.reload = function () {
+            $route.reload();
+            // reloads the page WITHOUT reloading entire app
+        }
 
         $scope.upVoteSession = function (session) {
             session.upVoteCount++;
