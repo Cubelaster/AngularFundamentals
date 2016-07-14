@@ -5,9 +5,9 @@ eventsApp
         return {
             restrict: 'E',
             replace: true,
-            priority: -1,
+            transclude: true,
 
-            template: "<button class='btn' ng-click='sayHello()'>Say hello</button>",
+            template: "<div><button class='btn' ng-click='sayHello()'>Say hello</button><div ng-transclude></div></div>",
             // controller: '@', // transports reference //No2
             // name: 'ctrl' // points to attribute in html //No2
             controller: 'GreetingController' //No2  
@@ -26,12 +26,7 @@ eventsApp
     .directive('finnish', function () {
         return {
             restrict: 'A',
-            priority: -1,
-            terminal: true, 
-            // terminal says that when this event is done, nothing else happens
-            // In this case, if finnish executes, hindi won't 
-            // BUT using terminal requires you to use negative priority values
-            require: 'greeting',
+            require: '^greeting',
             link: function (scope, element, attr, controller) {
                 controller.addGreeting('hei');
             }
@@ -39,9 +34,8 @@ eventsApp
     })
     .directive('hindi', function () {
         return {
-            restrict: 'A',
-            priority: -2,
-            require: 'greeting',
+            restrict: 'A',            
+            require: '^greeting',
             link: function (scope, element, attr, controller) {
                 controller.addGreeting('heil');
             }

@@ -1,4 +1,4 @@
-<div class="padded"  ng-cloak>
+<div class="padded" ng-cloak>
     <div id="me">
         <img ng-src="{{event.imageUrl}}" alt="{{event.name}}" />
         <!--<button type="button" class="btn btn-primary" ng-click="scrollToSession()">Scroll</button>-->
@@ -45,17 +45,19 @@
                     -->
                 <div class="row session">
 
-                    <upvote upvote="upVoteSession(session)" downvote="downVoteSession(session)"
-                        count="session.upVoteCount"/>
+                    <upvote upvote="upVoteSession(session)" downvote="downVoteSession(session)" count="session.upVoteCount" />
 
                     <div class="well span9">
-                        <h4 class="well-title">{{session.name}}</h4>
-                        <h6 style="margin-top: -10px"> {{session.creatorName}}</h6>
-                        <span>Duration: {{session.duration | durations }}</span> <br />
-                        <span>Level: {{session.level}}</span>
+                        <collapsible title="{{session.name}}">
+                            <h6 style="margin-top: -10px"> {{session.creatorName}}</h6>
+                            <span>Duration: {{session.duration | durations }}</span> <br />
+                            <span>Level: {{session.level}}</span>
 
-                        <p>{{session.abstract}}</p>
+                            <p>{{session.abstract}}</p>
+                        </collapsible>
                     </div>
+
+
                 </div>
             </li>
         </ul>
