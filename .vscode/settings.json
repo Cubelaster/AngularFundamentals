@@ -3,7 +3,7 @@
     "workbench.editor.enablePreview": true,
     "editor.acceptSuggestionOnEnter": false,
     "editor.fontFamily": "Consolas, 'Courier New', monospace",
-    "editor.wrappingColumn": 80,
+    "editor.wrappingColumn": 90,
     "window.openFilesInNewWindow": true,
     "terminal.integrated.fontFamily": "Consolas"
 }
