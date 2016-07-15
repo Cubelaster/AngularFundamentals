@@ -13,7 +13,6 @@ describe('EventListController', function() {
 
   it('should stuff', function() {
     var mockEvents = {};
-    
     mockEventData.getAllEvents.returns(mockEvents);
 
     var ctrl = $controllerConstructor("EventListController",
