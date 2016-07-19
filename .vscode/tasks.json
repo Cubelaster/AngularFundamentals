@@ -16,6 +16,11 @@
             "taskName": "ExplicitKarmaTest",
             "isBuildCommand": true,
             "showOutput": "always"
+        },
+        {
+            "taskName": "Protractor",
+            "isTestCommand": true,
+            "showOutput": "always"
         }
     ]
 }

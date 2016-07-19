@@ -1,5 +1,7 @@
 var gulp = require('gulp');
+var util = require("gulp-util");
 var karma_gulp = require('gulp-karma');
+var gulpProtractorAngular = require('gulp-angular-protractor')
 
 var server = require('karma').server;
 
@@ -26,6 +28,23 @@ gulp.task('ExplicitKarmaTest', function () {
             throw err;
         })
 });
+
+gulp.task('Protractor', function () {
+    var testFiles = [];
+    var configFile = 'DemoApp/test/protractor-conf.js';
+
+    return gulp.src(testFiles)
+        .pipe(gulpProtractorAngular({
+            configFile: configFile,
+            args: ['--baseUrl', 'http://localhost:8000/'],
+            'autoStartStopServer': true
+        }))
+        .on('error', function (err) {
+            throw err;
+        });
+});
+
+
 
 
 // https://gist.github.com/renegare/9173656

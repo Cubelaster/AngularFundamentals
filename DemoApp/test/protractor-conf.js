@@ -1,19 +1,21 @@
 exports.config = {
-  allScriptsTimeout: 11000,
-
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  seleniumServerJar: './node_modules/protractor/selenium/selenium-server-standalone-2.53.1.jar',
   specs: [
     'e2e/*.js'
   ],
-
   capabilities: {
     'browserName': 'chrome'
-  },
-
-  baseUrl: 'http://localhost:8000/app/',
-
-  framework: 'jasmine',
-
-  jasmineNodeOpts: {
-    defaultTimeoutInterval: 30000
   }
+
+
+  // allScriptsTimeout: 11000,
+
+  // baseUrl: 'http://localhost:8000/app/',
+
+  // framework: 'jasmine',
+
+  // jasmineNodeOpts: {
+  //   defaultTimeoutInterval: 30000
+  // }
 };
