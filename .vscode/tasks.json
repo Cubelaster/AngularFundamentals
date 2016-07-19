@@ -9,17 +9,18 @@
     "tasks": [
         {
             "taskName": "KarmaTask",
-            "isTestCommand": true,
             "showOutput": "always"
         },
         {
             "taskName": "ExplicitKarmaTest",
-            "isBuildCommand": true,
             "showOutput": "always"
         },
         {
             "taskName": "Protractor",
-            "isTestCommand": true,
+            "showOutput": "always"
+        },
+        {
+            "taskName": "httpServer",
             "showOutput": "always"
         }
     ]
