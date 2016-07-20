@@ -35,7 +35,6 @@ gulp.task('Protractor', ['httpServer'], function () {
     var testFiles = [];
     var configFile = 'DemoApp/test/protractor-conf.js';
 
-
     return gulp.src(testFiles)
         .pipe(gulpProtractorAngular({
             configFile: configFile,

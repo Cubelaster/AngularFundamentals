@@ -6,7 +6,8 @@ exports.config = {
   ],
   capabilities: {
     'browserName': 'chrome'
-  }
+  },
+  singleRun: true
 
 
   // allScriptsTimeout: 11000,
